@@ -1,0 +1,331 @@
+/*Topページ*/
+
+html {
+  font-size: 10px;
+}
+@media (min-width: 1200px /*xl-*/) {
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4.4rem;
+    margin-top: 12rem;
+    margin-bottom: 6rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+    margin: 10rem auto 0 auto;
+    width: 1200px;
+    background-color: gray;
+  }
+  .public-com-container {
+    p1 {
+      font-size: 2rem;
+    }
+  }
+  .btn-black {
+    font-size: 2.4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 2.5rem;
+    margin-top: 20rem;
+  }
+  .box_scrollbar {
+    display: block;
+    overflow: auto;
+    width: 60%;
+    height: 30rem;
+    margin: auto;
+  }
+  
+  .table td {
+    font-size: 2.4rem;
+  }
+  .community-image {
+    margin: auto;
+    width: 5rem;
+    height: 5rem;
+  }
+  .users-new-container {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    h4 {
+      font-size: 4rem;
+      margin-top: 7rem;
+      
+    }
+    .label-text {
+      font-size: 1.8rem;
+    }
+    .btn-primary {
+      font-size: 1.8rem;
+    }
+    p2, .form-check-label {
+      font-size: 1.6rem;
+    }
+    .form-check-input {
+      width: 1.8rem;
+      height: 1.8rem;
+      margin-top: 0.4rem;
+      margin-left: 0.1rem;
+    }
+    .form-check-label {
+      padding-left: 2rem;
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) /*sm-md-lg*/{
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 3.6rem;
+    margin-top: 10rem;
+    margin-bottom: 6rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+    margin: 5rem auto 0 auto;
+    width: 60%;
+    background-color: gray;
+  }
+  .public-com-container {
+    p1 {
+      font-size: 1.6rem;
+    }
+  }
+  .btn-black {
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 2.5rem;
+    margin-top: 20rem;
+  }
+  .box_scrollbar {
+    display: block;
+    overflow: auto;
+    width: 60%;
+    height: 25rem;
+    margin: auto;
+  }
+  .table td {
+    font-size: 2.0rem;
+  }
+  .community-image {
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+  }
+  .users-new-container {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    h4 {
+      font-size: 3.6rem;
+      margin-top: 7rem;
+    }
+    .label-text {
+      font-size: 1.8rem;
+    }
+    .btn-primary {
+      font-size: 1.8rem;
+    }
+    p2, .form-check-label {
+      font-size: 1.6rem;
+    }
+    .form-check-input {
+      width: 1.8rem;
+      height: 1.8rem;
+      margin-top: 0.4rem;
+      margin-left: 0.1rem;
+    }
+    .form-check-label {
+      padding-left: 2rem;
+    }
+  }
+}
+@media(max-width: 767px) /*md-*/{
+  h1 {
+    font-size: 6rem;
+    /*margin-top: -2rem;*/
+  }
+  h2 {
+    font-size: 2.4rem;
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin: 4rem auto 0 auto;
+    width: 70%;
+    background-color: gray;
+  }
+  .public-com-container {
+    p1 {
+      font-size: 1.4rem;
+    }
+  }
+  .btn-black {
+    font-size: 1.4rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-radius: 2.2rem;
+    margin-top: 9rem;
+  }
+  .box_scrollbar {
+    display: block;
+    overflow: auto;
+    width: 70%;
+    height: 20rem;
+    margin: auto;
+  }
+  .table td {
+    font-size: 1.6rem;
+  }
+  .community-image {
+    margin: auto;
+    width: 3rem;
+    height: 3rem;
+  }
+  .users-new-container {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    h4 {
+      font-size: 2.4rem;
+      margin-top: 6rem;
+    }
+    .label-text {
+      font-size: 1.4rem;
+    }
+    .btn-primary {
+      font-size: 1.4rem;
+    }
+    p2, .form-check-label {
+      font-size: 1.2rem;
+    }
+    .form-check-input {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-left: 0.05rem;
+    }
+    .form-check-label {
+      margin-left: 1.6rem;
+    }
+  }
+}
+
+.top-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-color: #a2efef;
+}
+.top-container {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.text-black {
+  color: #000;
+}
+.btn-black {
+  color: #000;
+  border: 1px solid #000;
+  
+  &:hover {
+    color: #000;
+  }
+}
+
+.table {
+  border: solid 1px black;
+}
+.table td {
+  /*border: solid 1px black;*/
+  /*margin: 1rem 0 1rem 0;*/
+  white-space: nowrap; /*セル内の自動改行・折り返しの禁止、または空白類文字（改行、半角スペース、タブ）の扱いをなくす*/
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+vertical-align: middle;    /*上下中央寄せ*/
+}
+
+/*コミュニティ詳細検索ページ*/
+.com-show-container {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.text-charcoal {
+  color: #2a2a2a;
+}
+
+/*メインページ*/
+.main_container {
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+}
+.sidebar {
+  display: none
+  
+  /*position: fixed;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto*/
+}
+
+
+.text-gray {
+  color: #777;
+}
+
+/*テスト*/
+.active{
+	max-width: 60vw;
+	max-height: 65vh;
+	min-width: 300px;
+	min-height: 150px;
+	overflow: scroll;
+}
+.apple-orange {
+  color: red;
+}
+
+.title {
+  color: rgba(255, 0, 0, 0.8) /* RGBA */
+}
+.header-title-area {
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+
+
+/*コメント機能*/
+.comment {
+  display: flex;
+  width: 35rem;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+.comment-left {
+  margin-right: 1rem
+}
+.comment-right {
+  
+}
+.comment-avatar {
+  width: 3rem;
+  height: 3rem;
+}
+.comment-buttons {
+  font-size: smaller;
+  text-align: right;
+}
+.comment-button:not(:last-child) {
+  margin-right: 0.5rem;
+}
