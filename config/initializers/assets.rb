@@ -12,5 +12,13 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
-Rails.application.config.assets.precompile += %w( resizebox.js )
-Rails.application.config.assets.precompile += %w( resize.js )
+Rails.application.config.assets.precompile += %w( d_custom.scss )
+Rails.application.config.assets.precompile += %w( t_custom.scss )
+Rails.application.config.assets.precompile += %w( m_custom.scss )
+
+Rails.application.config.assets.precompile += %w( pages_index_resize.js )
+Rails.application.config.assets.precompile += %w( searches_show_resize.js )
+Rails.application.config.assets.precompile += %w( users_new_resize.js )
+Rails.application.config.assets.precompile += %w( invitations_new_resize.js )
+Rails.application.config.assets.precompile += %w( communities_new_resize.js )
+Rails.application.config.assets.precompile += %w( sessions_new_resize.js )

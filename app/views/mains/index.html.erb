@@ -1,21 +1,124 @@
+<body class="drawer drawer--left">
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <%= icon('fas', 'bars fa-3x') %> <%#span class="drawer-hamburger-icon"></span%>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+      <ul class="drawer-menu">
+        <li><a class="drawer-brand" href="#">参加コミュニティー</a></li>
+        <li class="drawer-dropdown">
+          <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            F.L.Tクラブ <span class="drawer-caret"></span>
+          </a>
+          <ul class="drawer-dropdown-menu">
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="drawer-caret"></span> チャンネル
+            </a>
+              <li><a class="drawer-dropdown-menu-item" href="#">練習日</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="#">大会</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="#">練習試合</a></li>
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              <%= icon('far', 'calendar-alt fa-2x faa-tada animated') %> カレンダー
+            </a>
+          </ul>
+        </li>
+        <li class="drawer-dropdown">
+          <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Tech Boost <span class="drawer-caret"></span>
+          </a>
+          <ul class="drawer-dropdown-menu">
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="drawer-caret"></span> チャンネル
+            </a>
+              <li><a class="drawer-dropdown-menu-item" href="#">オンラインサポート</a></li>
+              <li><a class="drawer-dropdown-menu-item" href="#">求人・キャリア関連</a></li>
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              <%= icon('far', 'calendar-alt fa-2x faa-tada animated') %> カレンダー
+            </a>
+          </ul>
+        </li>
+        <li class="drawer-dropdown">
+          <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            こぶし <span class="drawer-caret"></span>
+          </a>
+          <ul class="drawer-dropdown-menu">
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="drawer-caret"></span> チャンネル
+            </a>
+              <li><a class="drawer-dropdown-menu-item" href="#">練習日</a></li>
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              <%= icon('far', 'calendar-alt fa-2x faa-tada animated') %> カレンダー
+            </a>
+          </ul>
+        </li>
+        <li class="drawer-dropdown">
+          <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            Team Black <span class="drawer-caret"></span>
+          </a>
+          <ul class="drawer-dropdown-menu">
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="drawer-caret"></span> チャンネル
+            </a>
+              <li><a class="drawer-dropdown-menu-item" href="#">活動日</a></li>
+            <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+              <%= icon('far', 'calendar-alt fa-2x faa-tada animated') %> カレンダー
+            </a>
+          </ul>
+        </li>
+      </ul>
+      <li><a class="drawer-brand" href="#">ダイレクトメッセージ</a></li>
+      <%#li class="drawer-dropdown">
+        <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+          <span class="drawer-caret"></span> F.L.Tクラブ
+        </a>
+        <ul class="drawer-dropdown-menu">
+          <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            監督
+          </a>
+        </ul>
+      </li%>
+      <li class="drawer-dropdown"><a class="drawer-menu-item dropdown-toggle" href="#" role="button"
+            data-toggle="dropdown">グループ</a>
+         <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Ａａａ</a>
+            <a class="dropdown-item" href="#">Ｂｂｂ</a>
+            <a class="dropdown-item" href="#">Ｃｃｃ</a>
+         </div>
+      </li>
+      <li class="drawer-dropdown">
+        <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+          <span class="drawer-caret"></span> Tech Boost
+        </a>
+        <ul class="drawer-dropdown-menu">
+          <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false">
+            メンター松田
+          </a>
+        </ul>
+      </li>
+    </nav>
+  </header>
+  <main role="main">
+    <!-- Page content -->
+  </main>
+</body>
+
 <div class="top-wrapper text-center">
   <div class="container-fluid">
+    <div class="col-xl-4 col-lg-4 col-md-3 col-2">
+      
+    </div>
     <div class="main_container">
       <div class="row">
-        <div class="sidebar col-xl-3 col-lg-3 col-md-3 col-2">
-          <p>Sidebar</p>
-          <ul id="list"></ul>
-          <ul>F.L.Tクラブ</ul>
-            <ul>チャンネル</ul>
-          <ul>Tech Boost</ul>
-          <ul>こぶし</ul>
-          <ul>Team Black</ul>
-          <ul>ルクール</ul>
-        </div>
         <div class="offset-xl-3 offset-lg-3 offset-md-3 offset-2 col-xl-9 col-lg-9 col-md-9 col-10">
-          <p>main</p>
+          <p>イベント情報など</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script type="text/javascript">
+$(function() {
+      $('.drawer').drawer();
+});
+</script>

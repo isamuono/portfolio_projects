@@ -4,4 +4,7 @@ class TestsController < ApplicationController
   
   def test2
   end
+  
+  def test3
+  end
 end

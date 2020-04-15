@@ -1,156 +1,131 @@
 <div class="top-wrapper text-center">
   <div class="com-show-container">
-    <h2 class="text-black mt-auto">コミュニティを探す</h2>
-    <div class="row pb-4">
-      <div class="offset-xl-3 offset-lg-2 offset-md-2 offset-1 col-xl-6 col-lg-8 col-md-8 col-10">
-        <div class="input-group" id="resizebox">
-          <input type="text" class="form-control" placeholder="キーワードから探す">
-          <span class="input-group-append">
-            <button type="button" class="btn btn-primary">
-              <i class="fa fa-search"></i>
-            </button>
-          </span>
+    <div name="selbox">
+      <h2 class="text-black mt-auto">コミュニティを探す</h2>
+      <%= form_with url: '/', method: 'get' do |f| %>
+        <div class="row pb-4">
+          <div class="offset-xl-3 offset-lg-2 offset-md-2 offset-1 col-xl-6 col-lg-8 col-md-8 col-10">
+            <div class="input-group" id="resizebox">
+              <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "キーワードから探す" %> <%# params[:search]をどうするか %>
+              <span class="input-group-append">
+                <%= link_to '#', class: "btn btn-primary", method: :get do %>
+                  <i class="fa fa-search"></i>
+                <% end %>
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="row mt-5">
-      <div class="offset-xl-4 offset-lg-3 offset-md-3 offset-2 col-xl-4 col-lg-6 col-md-6 col-8">
-        <%#= form_for @user do |f| %>
-        <div class="input-group mb-auto">
-          <select class="custom-select custom-select-lg text-charcoal" id="inputGroupSelect01">
-            <option selected>カテゴリーを選択...</option>
-            <option value="1">運動・スポーツ</option>
-            <option value="2">文化</option>
-            <option value="3">営利団体</option>
-            <option value="4">非営利団体・公共団体</option>
-            <option value="5">その他</option>
-          </select>
+        <div class="row mt-5">
+          <div class="offset-xl-4 offset-lg-3 offset-md-3 offset-2 col-xl-4 col-lg-6 col-md-6 col-8">
+            <div class="input-group mb-auto">
+              <%= f.select :category, [["運動・スポーツ・アウトドア", 1], ["文化", 2], ["営利団体", 3], ["非営利団体・公共団体", 4], ["その他", 5]],
+                { :prompt => "カテゴリーを選択..." }, { class: "custom-select text-charcoal", name: "customselectbox1", id: "customselectbox1", onchange: "categorySet()" } %>
+            </div>
+            <div class="input-group mb-4">
+              <select class="custom-select text-charcoal" name="customselectbox2" id="customselectbox2">
+                <option value="0" selected>サブカテゴリーを選択...</option>
+              </select>
+            </div>
+            <div class="input-group mb-4">
+              <select class="custom-select text-charcoal" id="customselectbox3">
+                <option selected>都道府県を選択</option>
+                <option value="1">北海道</option>
+                <option value="2">青森県</option>
+                <option value="3">岩手県</option>
+                <option value="4">宮城県</option>
+                <option value="5">秋田県</option>
+                <option value="6">山形県</option>
+                <option value="7">福島県</option>
+                <option value="8">茨城県</option>
+                <option value="9">栃木県</option>
+                <option value="10">群馬県</option>
+                <option value="11">埼玉県</option>
+                <option value="12">千葉県</option>
+                <option value="13">東京都</option>
+                <option value="14">神奈川県</option>
+                <option value="15">新潟県</option>
+                <option value="16">富山県</option>
+                <option value="17">石川県</option>
+                <option value="18">福井県</option>
+                <option value="19">山梨県</option>
+                <option value="20">長野県</option>
+                <option value="21">岐阜県</option>
+                <option value="22">静岡県</option>
+                <option value="23">愛知県</option>
+                <option value="24">三重県</option>
+                <option value="25">滋賀県</option>
+                <option value="26">京都府</option>
+                <option value="27">大阪府</option>
+                <option value="28">兵庫県</option>
+                <option value="29">奈良県</option>
+                <option value="30">和歌山県</option>
+                <option value="31">鳥取県</option>
+                <option value="32">島根県</option>
+                <option value="33">岡山県</option>
+                <option value="34">広島県</option>
+                <option value="35">山口県</option>
+                <option value="36">徳島県</option>
+                <option value="37">香川県</option>
+                <option value="38">愛媛県</option>
+                <option value="39">高知県</option>
+                <option value="40">福岡県</option>
+                <option value="41">佐賀県</option>
+                <option value="42">長崎県</option>
+                <option value="43">熊本県</option>
+                <option value="44">大分県</option>
+                <option value="45">宮崎県</option>
+                <option value="46">鹿児島県</option>
+                <option value="47">沖縄県</option>
+              </select>
+            </div>
+            <div class="input-group mb-4">
+              <select class="custom-select text-charcoal" id="customselectbox4">
+                <option selected>性別を選択...</option>
+                <option value="1">男性</option>
+                <option value="2">女性</option>
+                <option value="3">指定なし</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <select class="custom-select text-charcoal" id="customselectbox5">
+                <option selected>規模/人数を選択...</option>
+                <option value="1">1〜10人</option>
+                <option value="2">11〜50人</option>
+                <option value="3">51〜100人</option>
+                <option value="4">101〜500人</option>
+                <option value="5">501〜1000人</option>
+                <option value="6">1001人〜</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="input-group mb-4">
-          <select class="custom-select custom-select-lg text-charcoal" id="inputGroupSelect02">
-            <option selected>サブカテゴリーを選択...</option>
-            <option value="1">野球</option>
-            <option value="2">サッカー・フットサル</option>
-            <option value="3">テニス</option>
-            <option value="4">ソフトテニス</option>
-            <option value="5">卓球</option>
-            <option value="6">バドミントン</option>
-            <option value="7">バスケットボール</option>
-            <option value="8">バレーボール</option>
-            <option value="9">ゴルフ</option>
-            <option value="10">ダンス</option>
-            <option value="11">ヨガ</option>
-            <option value="12">登山</option>
-            <option value="13">マリンスポーツ</option>
-            <option value="14">ウィンタースポーツ</option>
-            <option value="15">自転車競技・スポーツバイク</option>
-            <option value="16">陸上競技・マラソン・ジョギング</option>
-            <option value="17">その他</option>
-          </select>
-          <select class="custom-select custom-select-lg text-charcoal" id="inputGroupSelect03">
-            <option selected>サブカテゴリーを選択...</option>
-            <option value="1">伝統・文芸・工芸</option>
-            <option value="2">衣食住</option>
-            <option value="3">健康</option>
-            <option value="4">旅行</option>
-            <option value="5">音楽</option>
-            <option value="6">美術・芸術</option>
-            <option value="7">読書</option>
-            <option value="8">教育</option>
-            <option value="9">コミュニケーション・言語・外国語</option>
-            <option value="10">テクノロジー・文明</option>
-            <option value="11">その他</option>
-          </select>
-          <select class="custom-select custom-select-lg text-charcoal" id="inputGroupSelect04">
-            <option selected>サブカテゴリーを選択...</option>
-            <option value="1">株式会社</option>
-            <option value="2">その他営利団体</option>
-          </select>
-          <select class="custom-select custom-select-lg text-charcoal" id="inputGroupSelect05">
-            <option selected>サブカテゴリーを選択...</option>
-            <option value="1">一般財団・公益社団・公益財団</option>
-            <option value="2">NPO</option>
-            <option value="3">宗教法人・学校法人</option>
-            <option value="4">ボランティア</option>
-            <option value="5">その他</option>
-          </select>
-        </div>
-        <div class="input-group mb-4">
-          <select class="custom-select custom-select-lg text-charcoal" id="inputGroupSelect06">
-            <option selected>都道府県を選択</option>
-            <option value="1">北海道</option>
-            <option value="2">青森県</option>
-            <option value="3">岩手県</option>
-            <option value="4">宮城県</option>
-            <option value="5">秋田県</option>
-            <option value="6">山形県</option>
-            <option value="7">福島県</option>
-            <option value="8">茨城県</option>
-            <option value="9">栃木県</option>
-            <option value="10">群馬県</option>
-            <option value="11">埼玉県</option>
-            <option value="12">千葉県</option>
-            <option value="13">東京都</option>
-            <option value="14">神奈川県</option>
-            <option value="15">新潟県</option>
-            <option value="16">富山県</option>
-            <option value="17">石川県</option>
-            <option value="18">福井県</option>
-            <option value="19">山梨県</option>
-            <option value="20">長野県</option>
-            <option value="21">岐阜県</option>
-            <option value="22">静岡県</option>
-            <option value="23">愛知県</option>
-            <option value="24">三重県</option>
-            <option value="25">滋賀県</option>
-            <option value="26">京都府</option>
-            <option value="27">大阪府</option>
-            <option value="28">兵庫県</option>
-            <option value="29">奈良県</option>
-            <option value="30">和歌山県</option>
-            <option value="31">鳥取県</option>
-            <option value="32">島根県</option>
-            <option value="33">岡山県</option>
-            <option value="34">広島県</option>
-            <option value="35">山口県</option>
-            <option value="36">徳島県</option>
-            <option value="37">香川県</option>
-            <option value="38">愛媛県</option>
-            <option value="39">高知県</option>
-            <option value="40">福岡県</option>
-            <option value="41">佐賀県</option>
-            <option value="42">長崎県</option>
-            <option value="43">熊本県</option>
-            <option value="44">大分県</option>
-            <option value="45">宮崎県</option>
-            <option value="46">鹿児島県</option>
-            <option value="47">沖縄県</option>
-          </select>
-        </div>
-        <div class="input-group mb-4">
-          <select class="custom-select custom-select-lg text-charcoal" id="inputGroupSelect07">
-            <option selected>性別を選択...</option>
-            <option value="1">男性</option>
-            <option value="2">女性</option>
-            <option value="3">指定なし</option>
-          </select>
-        </div>
-        <div class="input-group mb-5">
-          <select class="custom-select text-charcoal" id="inputGroupSelect08">
-            <option selected>規模/人数を選択...</option>
-            <option value="1">1〜10人</option>
-            <option value="2">11〜50人</option>
-            <option value="3">51〜100人</option>
-            <option value="4">101〜500人</option>
-            <option value="5">501〜1000人</option>
-            <option value="6">1001人〜</option>
-          </select>
-        </div>
-
-          <%#= submit "登録", class: 'btn-block btn-black' %>
-        <%# end %>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
-<script src="resizebox.js"></script>
+<%= javascript_include_tag "searches_show_resize.js" %>
+<script>
+  var subcategoryary1 = new Array(
+    <%= @sub1.html_safe %>
+  );
+  
+  var subcategoryary2 = new Array(
+    <%= @sub2.html_safe %>
+  );
+  
+  var subcategoryary3 = new Array(
+    <%= @sub3.html_safe %>
+  );
+  
+  var subcategoryary4 = new Array(
+    <%= @sub4.html_safe %>
+  );
+  
+  //var subcategoryary5 = new Array(
+    <%#= @sub5.html_safe %>
+  //);
+  
+  var subcategories = new Array(
+    0,subcategoryary1, subcategoryary2, subcategoryary3, subcategoryary4
+  );
+</script>

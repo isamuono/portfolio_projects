@@ -1,15 +1,3 @@
-var aElement = document.getElementById( "target" ) ;
-
-// classNameを取得 ( → "syncer arayutw squirrel" )
-var className = aElement.className ;
-
-// classNameを変更 ( → <a id="target" class="apple orange">SYNCER</a> )
-var myfunc = function(){
-    var aElement = document.getElementById("target");
-    aElement.className = "apple-orange" ;
-}
-
-
 //現在のページのURLの取得
 var url = document.location.href;
  

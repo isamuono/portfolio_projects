@@ -1,0 +1,2 @@
+class Gthread < ApplicationRecord
+end

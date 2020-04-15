@@ -4,30 +4,32 @@
       <h1 class="text-black">サイト名</h1>
       <div class="row">
         <div class="offset-xl-2 offset-lg-2 offset-md-1 offset-1 col-xl-3 col-lg-3 col-md-4 col-4" id="resizebutton1">
-          <%= link_to 'サインアップ', '#', class: 'btn btn-block btn-black btn-outline-info' %>
+          <%= link_to 'サインアップ', new_user_path, class: 'btn btn-block btn-black btn-outline-info' %>
         </div>
         <div class="offset-xl-2 offset-lg-2 offset-md-2 offset-2 col-xl-3 col-lg-3 col-md-4 col-4" id="resizebutton2">
-          <%= link_to 'ログイン', '#', class: 'btn btn-block btn-black' %>
+          <%= link_to 'ログイン', login_path, class: 'btn btn-block btn-black' %>
         </div>
       </div>
       <div class="public-com-container">
         <h2 class="text-black">コミュニティを探す</h2>
         <div class="row">
           <div class="offset-xl-2 offset-lg-2 offset-md-1 offset-1 col-xl-8 col-lg-8 col-md-10 col-10">
-            <div class="input-group" id="resizebox">
-              <input type="text" class="form-control" placeholder="キーワードから探す">
-              <span class="input-group-append">
-                <button type="button" class="btn btn-primary">
-                  <i class="fa fa-search"></i>
-                </button>
-              </span>
-            </div>
+            <%= form_with url: '/', method: 'get' do %>
+              <div class="input-group" id="resizebox">
+                <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "キーワードから探す" %> <%# params[:search]をどうするか %>
+                <span class="input-group-append">
+                  <%= link_to '#', class: "btn btn-primary", method: :get do %>
+                    <i class="fa fa-search"></i>
+                  <% end %>
+                </span>
+              </div>
+            <% end %>
           </div>
         </div>
         <div class="row text-right">
           <div class="offset-xl-2 offset-lg-2 offset-md-1 offset-1 col-xl-8 col-lg-8 col-md-10 col-10">
             <p1>
-              <%= link_to '>>詳細検索する', '#', class: "text-black" %>
+              <%= link_to '>>詳細検索する', searches_show_path, class: "text-black" %>
             </p1>
           </div>
         </div>
@@ -35,19 +37,19 @@
         <div class="box_scrollbar" align="center">
           <table class="table table-hover">
             <tr class="table-light">
-              <td width="6rem" align="center"><img src="./staff_01.jpg" class="community-image" class="img-thumbnail"></td><td>F.L.Tクラブ</td>
+              <td width="6rem" align="center"><%#img src="./staff_01.jpg" class="community-image" class="img-thumbnail"%></td><td>F.L.Tクラブ</td>
             </tr>
             <tr class="table-light">
-              <td align="center"><img src="./staff_02.jpg" class="community-image"></td><td>Tech Boost</td>
+              <td align="center"><%#img src="./staff_02.jpg" class="community-image"%></td><td>Tech Boost</td>
             </tr>
             <tr class="table-light">
-              <td align="center"><img src="./staff_02.jpg" class="community-image"></td><td>こぶし</td>
+              <td align="center"><%#img src="./staff_02.jpg" class="community-image"%></td><td>こぶし</td>
             </tr>
             <tr class="table-light">
-              <td align="center"><img src="./staff_02.jpg" class="community-image"></td><td>ルクール</td>
+              <td align="center"><%#img src="./staff_02.jpg" class="community-image"%></td><td>ルクール</td>
             </tr>
             <tr class="table-light">
-              <td align="center"><img src="./staff_02.jpg" class="community-image"></td><td>Team Black</td>
+              <td align="center"><%#img src="./staff_02.jpg" class="community-image"%></td><td>Team Black</td>
             </tr>
           </table>
         </div>
@@ -55,4 +57,4 @@
     </div>
   <%#</div>%>
 </div>
-<%= javascript_include_tag "resize.js" %>
+<%= javascript_include_tag "pages_index_resize.js" %>
